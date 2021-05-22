@@ -109,8 +109,10 @@ $(document).ready(function(){
         event.preventDefault();
         $('html,body').animate({scrollTop : 0},800);
     });
-    $('.search_form').click(function(){
-        $('.search_form .tg_off').toggleClass('tg_on');
-        console.log(1);
+    $('.search_form .icon_search').click(function(){
+        $('.wrap_search_header').addClass('show');
+    });
+    $('.wrap_search_header .close_popup').click(function(){
+        $('.wrap_search_header').removeClass('show');
     });
 });
