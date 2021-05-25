@@ -3,13 +3,13 @@
 			<?php
 			$args = array(
 				'post_type' => 'page',
-                'page_id' => 176 //list of page_ids
-      );
+                'page_id' => 76 //list of page_ids
+            );
 			$ft_page_query = new WP_Query( $args );
 			if(have_posts() ) :
         //print any general title or any header here//
 				while( $ft_page_query->have_posts() ) : $ft_page_query->the_post();
-				 the_content();
+					the_content();
 				endwhile;
 				wp_reset_postdata();
 			else:
@@ -17,8 +17,8 @@
 			endif;
 			?>
 		</div>
-		<div class="scroll_top ">
-			<i class="fa fa-angle-up" aria-hidden="true"></i>
+		<div class="scroll_top">
+			<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
 		</div>
 	</footer>
 	<?php wp_footer(); ?>
@@ -29,3 +29,4 @@
 	<script src="<?php echo BASE_URL; ?>/js/custom.js"></script>
 </body>
 </html>
+
